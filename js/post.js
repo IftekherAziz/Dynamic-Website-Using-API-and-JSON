@@ -38,6 +38,11 @@ How to show the data on the page dynamically:
 
 /* ----------------------------------------------------------------------- */
 
+/**
+ * It takes the data from the API and displays it on the page.
+ * @param data - The data returned from the API.
+ */
+
 function displayPosts(data) {
   const postContainer = document.getElementById("post-container");
   for (const post of data) {
@@ -51,3 +56,5 @@ function displayPosts(data) {
     postContainer.appendChild(div);
   }
 }
+
+/* ----------------------------------------------------------------------- */

@@ -36,3 +36,46 @@ function displayUser2(data) {
     }
 
 /* ----------------------------------------------------------------------- */
+
+
+function deletePost() {
+  fetch("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}
+
+/* ----------------------------------------------------------------------- */
+
+function patchPost() {
+  fetch("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "PATCH",
+    body: JSON.stringify({
+      title: "New Title",
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}
+
+/* ----------------------------------------------------------------------- */
+
+function postPost() {
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify({
+      title: "New Title",
+      body: "New Body",
+      userId: 1,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}
