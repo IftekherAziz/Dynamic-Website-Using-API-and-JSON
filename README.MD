@@ -35,7 +35,7 @@ console.log(stuInfo.name);
 
  8. Which method will you use if you need to update a particular data?
 
- - Modify
+ - Patch
 
  9. What status code will you get If the API is not available?
 
